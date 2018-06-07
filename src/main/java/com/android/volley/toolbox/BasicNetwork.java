@@ -250,11 +250,11 @@ public class BasicNetwork implements Network {
         if (entry.etag != null) {
             headers.put("If-None-Match", entry.etag);
         }
-
+/*
         if (entry.lastModified > 0) {
             headers.put("If-Modified-Since",
                     HttpHeaderParser.formatEpochAsRfc1123(entry.lastModified));
-        }
+        }*/
 
         return headers;
     }
