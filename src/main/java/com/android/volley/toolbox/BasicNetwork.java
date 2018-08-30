@@ -252,8 +252,8 @@ public class BasicNetwork implements Network {
         }
 /*
         if (entry.lastModified > 0) {
-            headers.put("If-Modified-Since",
-                    HttpHeaderParser.formatEpochAsRfc1123(entry.lastModified));
+            String date = HttpHeaderParser.formatEpochAsRfc1123(entry.lastModified);
+            headers.put("If-Modified-Since", date.replace("+00:00", ""));
         }*/
 
         return headers;
